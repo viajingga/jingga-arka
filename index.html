@@ -1,14 +1,436 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#100910"><title>Still You — Jingga × Arka</title>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#100910">
+<title>Still You — Jingga × Arka</title>
+
 <style>
-:root{--bg:#100910;--panel:#1b111b;--pink:#ef9acb;--muted:#c9b4c4;--line:#ffffff20;--white:#fff7fc}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 5% 10%,#4b1939,transparent 38%),radial-gradient(ellipse at 100% 45%,#2c1428,transparent 35%),var(--bg);color:var(--white);font-family:system-ui,sans-serif;line-height:1.65}button,input{font:inherit}button{cursor:pointer}.wrap{max-width:900px;margin:auto;padding:20px}.top{display:flex;justify-content:space-between;gap:12px;color:var(--pink);letter-spacing:.13em;font-size:.8rem;font-weight:700}.pill{border:1px solid var(--line);border-radius:999px;padding:8px 13px;color:#e6c9dc;letter-spacing:0}.hero{text-align:center;padding:60px 8px 38px}.eyebrow{letter-spacing:.24em;color:var(--pink);font-size:.78rem}.hero h1{font:clamp(3.4rem,14vw,6.3rem)/1 Georgia,serif;margin:14px 0 22px;letter-spacing:-.06em}.hero h1 em{color:var(--pink);font-weight:400}.hero p{font-size:clamp(1rem,4vw,1.3rem);color:#d7c4d2;max-width:650px;margin:0 auto 25px}.btn{border:1px solid var(--line);border-radius:18px;padding:12px 17px;color:var(--white);background:#ffffff09;margin:4px}.primary{background:linear-gradient(135deg,#f3a8d2,#bd679a)!important;color:#210d1b!important;border:0!important;font-weight:800}.section{margin:22px 0;padding:22px;border:1px solid var(--line);background:linear-gradient(140deg,#ffffff0c,#ffffff04);border-radius:26px}.section h2{font-size:1.2rem;margin:0 0 15px}.small{color:var(--muted);font-size:.92rem}.profile{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center}.profile img{width:110px;height:130px;object-fit:cover;border-radius:20px;border:1px solid #ffffff2c}.profile h3{margin:0;font-size:1.4rem}.stats{display:flex;justify-content:space-between;margin-top:18px;color:var(--muted)}.stats b{display:block;color:var(--white);font-size:1.3rem}.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.photo-grid figure{margin:0}.photo-grid img{display:block;width:100%;height:290px;object-fit:cover;border-radius:20px;border:1px solid var(--line)}figcaption{font-size:.85rem;color:var(--muted);padding:8px 3px}.letter{white-space:pre-line;color:#f4dfec;font:1.1rem/1.9 Georgia,serif}.phone{max-width:390px;margin:auto;border:1px solid #ffffff30;border-radius:28px;padding:14px;background:#0b080c}.phone-head{display:flex;align-items:center;gap:10px;padding:8px 5px 14px;border-bottom:1px solid var(--line)}.avatar{width:42px;height:42px;border-radius:50%;object-fit:cover}.chatlog{min-height:200px;max-height:320px;overflow:auto;padding:14px 3px;display:flex;flex-direction:column;gap:9px}.bubble{max-width:82%;padding:10px 13px;border-radius:16px;background:#30202e;align-self:flex-start}.bubble.me{align-self:flex-end;background:#d987b6;color:#210d1b}.chatform{display:flex;gap:7px;border-top:1px solid var(--line);padding-top:12px}.chatform input{min-width:0;flex:1;background:#201520;color:white;border:1px solid var(--line);border-radius:999px;padding:10px}.chatform button{border:0;border-radius:999px;background:var(--pink);padding:8px 14px;font-weight:700}.row{display:flex;flex-wrap:wrap;gap:8px}.secret,.callbox{display:none;margin-top:12px;padding:16px;border-radius:16px;background:#31172a}.callbox{text-align:center;background:#1c111d;border:1px solid var(--line)}.footer{text-align:center;color:#a78d9f;padding:28px 10px 45px;font-size:.85rem}.lock{position:fixed;inset:0;z-index:10;background:radial-gradient(ellipse at top,#511d40,#100910 60%);display:flex;align-items:center;justify-content:center;padding:24px}.lockbox{width:min(420px,100%);text-align:center;padding:30px 22px;border:1px solid #ffffff2b;background:#170d17;border-radius:28px}.lockbox h2{font:2.4rem Georgia,serif;margin:8px}.lockbox p{color:var(--muted)}.lockbox input{width:100%;padding:13px;border-radius:13px;background:#0f090f;color:white;border:1px solid var(--line);margin:8px 0}.err{color:#ffb6d9;min-height:1.5em}.hidden{display:none!important}@media(max-width:560px){.wrap{padding:15px}.hero{padding:48px 5px 28px}.section{padding:17px}.profile{grid-template-columns:85px 1fr}.profile img{width:85px;height:105px}.photo-grid img{height:210px}}
-</style></head><body>
-<div class="lock" id="lock"><div class="lockbox"><div style="font-size:2rem;color:var(--pink)">♡ ✦ ♡</div><p class="eyebrow">A LITTLE WORLD FOR TWO</p><h2>Just for us.</h2><p>Masukkan password untuk membuka sudut kecil Jingga × Arka.</p><form id="unlockForm"><input id="pass" type="password" placeholder="password..." autocomplete="off"><button class="btn primary">Buka pintu ♡</button></form><div class="err" id="err"></div></div></div>
-<main class="wrap hidden" id="site"><div class="top"><span>✦ JINGGA × ARKA</span><span class="pill">pink-black universe ♡</span></div>
-<header class="hero"><div class="eyebrow">JUST FOR THE TWO OF US</div><h1>Still <em>you.</em></h1><p>Di antara banyak hal yang berubah, ada satu hal yang tetap ingin Jingga pilih: Arka. Selamat datang di sudut kecil yang dibuat khusus untuk kita. ♡</p><button class="btn primary" onclick="document.getElementById('letter').scrollIntoView()">Buka surat kecil</button><button class="btn" onclick="heartBurst()">Kirim hati ✦</button></header>
-<section class="section"><h2>✧ OUR LITTLE PROFILE</h2><div class="profile"><img src="foto2.jpeg" alt="Foto Jingga dan Arka" onerror="this.src='tidak%20bernama%20(17).png'"><div><h3>Jingga & Arka</h3><div class="small">@our.little.universe</div><p class="small">Dua orang, satu cerita, dan banyak momen kecil yang layak disimpan.</p></div></div><div class="stats"><div><b>∞</b> little moments</div><div><b>♡</b> favorite person</div><div><b>1</b> team us</div></div></section>
-<section class="section"><h2>♡ OUR LITTLE MEMORIES</h2><div class="photo-grid"><figure><img src="foto2.jpeg" alt="Kenangan berdua" onerror="this.style.display='none'"><figcaption>Di mana pun, tetap kamu. ♡</figcaption></figure><figure><img src="tidak%20bernama%20(17).png" alt="Momen manis kita" onerror="this.style.display='none'"><figcaption>Satu momen kecil yang ingin disimpan.</figcaption></figure></div><p class="small">Jika foto tidak muncul, pastikan nama file di repository sama persis dengan nama pada kode.</p></section>
-<section class="section" id="letter"><h2>💌 A LETTER FOR YOU</h2><div class="letter">Untuk Arka,
+:root {
+  --bg: #100910;
+  --panel: #1b111b;
+  --pink: #ef9acb;
+  --muted: #c9b4c4;
+  --line: #ffffff20;
+  --white: #fff7fc;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 5% 10%, #4b1939, transparent 38%),
+    radial-gradient(ellipse at 100% 45%, #2c1428, transparent 35%),
+    var(--bg);
+  color: var(--white);
+  font-family: system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+.wrap {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--pink);
+  letter-spacing: .13em;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 13px;
+  color: #e6c9dc;
+  letter-spacing: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 8px 38px;
+}
+
+.eyebrow {
+  letter-spacing: .24em;
+  color: var(--pink);
+  font-size: .78rem;
+}
+
+.hero h1 {
+  font: clamp(3.4rem, 14vw, 6.3rem)/1 Georgia, serif;
+  margin: 14px 0 22px;
+  letter-spacing: -.06em;
+}
+
+.hero h1 em {
+  color: var(--pink);
+  font-weight: 400;
+}
+
+.hero p {
+  font-size: clamp(1rem, 4vw, 1.3rem);
+  color: #d7c4d2;
+  max-width: 650px;
+  margin: 0 auto 25px;
+}
+
+.btn {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 12px 17px;
+  color: var(--white);
+  background: #ffffff09;
+  margin: 4px;
+}
+
+.primary {
+  background: linear-gradient(135deg, #f3a8d2, #bd679a) !important;
+  color: #210d1b !important;
+  border: 0 !important;
+  font-weight: 800;
+}
+
+.section {
+  margin: 22px 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: linear-gradient(140deg, #ffffff0c, #ffffff04);
+  border-radius: 26px;
+}
+
+.section h2 {
+  font-size: 1.2rem;
+  margin: 0 0 15px;
+}
+
+.small {
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile img {
+  width: 110px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid #ffffff2c;
+}
+
+.profile h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.stats b {
+  display: block;
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.photo-grid figure { margin: 0; }
+
+.photo-grid img {
+  display: block;
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+}
+
+figcaption {
+  font-size: .85rem;
+  color: var(--muted);
+  padding: 8px 3px;
+}
+
+.letter {
+  white-space: pre-line;
+  color: #f4dfec;
+  font: 1.1rem/1.9 Georgia, serif;
+}
+
+.phone {
+  max-width: 390px;
+  margin: auto;
+  border: 1px solid #ffffff30;
+  border-radius: 28px;
+  padding: 14px;
+  background: #0b080c;
+}
+
+.phone-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 5px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chatlog {
+  min-height: 200px;
+  max-height: 320px;
+  overflow: auto;
+  padding: 14px 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.bubble {
+  max-width: 82%;
+  padding: 10px 13px;
+  border-radius: 16px;
+  background: #30202e;
+  align-self: flex-start;
+  overflow-wrap: anywhere;
+}
+
+.bubble.me {
+  align-self: flex-end;
+  background: #d987b6;
+  color: #210d1b;
+}
+
+.chatform {
+  display: flex;
+  gap: 7px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.chatform input {
+  min-width: 0;
+  flex: 1;
+  background: #201520;
+  color: white;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px;
+}
+
+.chatform button {
+  border: 0;
+  border-radius: 999px;
+  background: var(--pink);
+  padding: 8px 14px;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.secret, .callbox {
+  display: none;
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #31172a;
+}
+
+.callbox {
+  text-align: center;
+  background: #1c111d;
+  border: 1px solid var(--line);
+}
+
+.footer {
+  text-align: center;
+  color: #a78d9f;
+  padding: 28px 10px 45px;
+  font-size: .85rem;
+}
+
+.lock {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  background: radial-gradient(ellipse at top, #511d40, #100910 60%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lockbox {
+  width: min(420px, 100%);
+  text-align: center;
+  padding: 30px 22px;
+  border: 1px solid #ffffff2b;
+  background: #170d17;
+  border-radius: 28px;
+}
+
+.lockbox h2 {
+  font: 2.4rem Georgia, serif;
+  margin: 8px;
+}
+
+.lockbox p { color: var(--muted); }
+
+.lockbox input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 13px;
+  background: #0f090f;
+  color: white;
+  border: 1px solid var(--line);
+  margin: 8px 0;
+}
+
+.err {
+  color: #ffb6d9;
+  min-height: 1.5em;
+}
+
+.hidden { display: none !important; }
+
+@media(max-width: 560px) {
+  .wrap { padding: 15px; }
+  .hero { padding: 48px 5px 28px; }
+  .section { padding: 17px; }
+  .profile { grid-template-columns: 85px 1fr; }
+  .profile img { width: 85px; height: 105px; }
+  .photo-grid img { height: 210px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="lock" id="lock">
+  <div class="lockbox">
+    <div style="font-size:2rem;color:var(--pink)">♡ ✦ ♡</div>
+    <p class="eyebrow">A LITTLE WORLD FOR TWO</p>
+    <h2>Just for us.</h2>
+    <p>Masukkan password untuk membuka sudut kecil Jingga × Arka.</p>
+
+    <form id="unlockForm">
+      <input id="pass" type="password" placeholder="password..." autocomplete="off" required>
+      <button class="btn primary" type="submit">Buka pintu ♡</button>
+    </form>
+
+    <div class="err" id="err"></div>
+  </div>
+</div>
+
+<main class="wrap hidden" id="site">
+
+<div class="top">
+  <span>✦ JINGGA × ARKA</span>
+  <span class="pill">pink-black universe ♡</span>
+</div>
+
+<header class="hero">
+  <div class="eyebrow">JUST FOR THE TWO OF US</div>
+  <h1>Still <em>you.</em></h1>
+
+  <p>
+    Di antara banyak hal yang berubah, ada satu hal yang tetap ingin
+    Jingga pilih: Arka. Selamat datang di sudut kecil yang dibuat
+    khusus untuk kita. ♡
+  </p>
+
+  <button class="btn primary" onclick="document.getElementById('letter').scrollIntoView()">
+    Buka surat kecil
+  </button>
+
+  <button class="btn" onclick="heartBurst()">Kirim hati ✦</button>
+</header>
+
+<section class="section">
+  <h2>✧ OUR LITTLE PROFILE</h2>
+
+  <div class="profile">
+    <img src="foto2.jpeg" alt="Foto Jingga dan Arka"
+         onerror="tryNextPhoto(this)">
+
+    <div>
+      <h3>Jingga & Arka</h3>
+      <div class="small">@our.little.universe</div>
+      <p class="small">
+        Dua orang, satu cerita, dan banyak momen kecil yang layak disimpan.
+      </p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><b>∞</b> little moments</div>
+    <div><b>♡</b> favorite person</div>
+    <div><b>1</b> team us</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>♡ OUR LITTLE MEMORIES</h2>
+
+  <div class="photo-grid">
+    <figure>
+      <img src="foto2.jpeg" alt="Kenangan berdua"
+           onerror="tryNextPhoto(this)">
+      <figcaption>Di mana pun, tetap kamu. ♡</figcaption>
+    </figure>
+
+    <figure>
+      <img src="tidak%20bernama%20(17).png" alt="Momen manis kita"
+           onerror="this.closest('figure').style.display='none'">
+      <figcaption>Satu momen kecil yang ingin disimpan.</figcaption>
+    </figure>
+  </div>
+
+  <p class="small">
+    Foto memakai file yang sudah ada di repository GitHub.
+  </p>
+</section>
+
+<section class="section" id="letter">
+  <h2>💌 A LETTER FOR YOU</h2>
+
+  <div class="letter">Untuk Arka,
 
 Aku mungkin nggak selalu pandai menyusun kata-kata manis. Tapi di antara semua hal kecil yang terjadi setiap hari, kamu tetap jadi salah satu bagian yang paling ingin aku pertahankan.
 
@@ -18,14 +440,195 @@ Kalau suatu hari dunia terasa berisik, semoga halaman kecil ini mengingatkan kam
 
 Still you. Still us. ♡
 
-— Jingga</div></section>
-<section class="section"><h2>💬 OUR LITTLE CHAT</h2><div class="phone"><div class="phone-head"><img class="avatar" src="foto2.jpeg" alt="" onerror="this.style.display='none'"><div><b>Arka ♡</b><div class="small">online in Jingga's universe</div></div></div><div class="chatlog" id="chatlog"><div class="bubble">Kamu lagi ngapain? Jangan bilang kangen aku. 😏</div><div class="bubble me">Geer banget. Tapi kalau iya, kenapa? ♡</div><div class="bubble">Sini cerita. Aku dengerin, kok.</div><div class="bubble me">Ih, sok cool. Sini dulu baru aku cerita.</div></div><form class="chatform" id="chatform"><input id="chatinput" placeholder="Tulis pesan..." maxlength="180"><button>Kirim</button></form></div><p class="small">Ini simulasi chat di website, bukan pesan yang terkirim ke WhatsApp Arka.</p></section>
-<section class="section"><h2>☎️ ONE LITTLE CALL</h2><p class="small">Panggilan simulasi untuk layar HP.</p><div class="row"><button class="btn primary" onclick="startCall()">♡ Panggil Arka</button><button class="btn" onclick="endCall()">Tutup panggilan</button></div><div class="callbox" id="callbox"><div style="font-size:2rem">♡</div><h3 id="calltitle">Memanggil Arka...</h3><p class="small" id="calltext">Tuut... tuut... ini cuma simulasi, ya.</p></div></section>
-<section class="section"><h2>🎵 OUR SONG</h2><p class="small">Untuk mengaktifkan musik, unggah lagu yang boleh kamu gunakan dengan nama <b>song.mp3</b> ke repository.</p><audio controls preload="none" style="width:100%" src="song.mp3"></audio></section>
-<section class="section"><h2>🔐 SECRET CORNER</h2><p class="small">Ada satu pesan kecil lagi kalau kamu sudah sampai sini.</p><button class="btn primary" onclick="document.getElementById('secret').style.display='block'">Buka rahasia ♡</button><div class="secret" id="secret">Kalau kamu membaca ini sampai akhir, berarti kamu sudah menjelajah semua sudut kecil yang aku siapkan. Aku senang punya kamu di ceritaku. — Jingga ♡</div></section>
-<div class="footer">Dibuat dengan ♡ oleh Jingga, untuk Arka · Still you, still us.</div></main>
+— Jingga</div>
+</section>
+
+<section class="section">
+  <h2>💬 OUR LITTLE CHAT</h2>
+
+  <div class="phone">
+    <div class="phone-head">
+      <img class="avatar" src="foto2.jpeg" alt="Foto"
+           onerror="tryNextPhoto(this)">
+
+      <div>
+        <b>Arka ♡</b>
+        <div class="small">online in Jingga's universe</div>
+      </div>
+    </div>
+
+    <div class="chatlog" id="chatlog">
+      <div class="bubble">Kamu lagi ngapain? Jangan bilang kangen aku. 😏</div>
+      <div class="bubble me">Geer banget. Tapi kalau iya, kenapa? ♡</div>
+      <div class="bubble">Sini cerita. Aku dengerin, kok.</div>
+      <div class="bubble me">Ih, sok cool. Sini dulu baru aku cerita.</div>
+    </div>
+
+    <form class="chatform" id="chatform">
+      <input id="chatinput" placeholder="Tulis pesan..." maxlength="180">
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+
+  <p class="small">
+    Ini simulasi chat di website, bukan pesan yang terkirim ke WhatsApp Arka.
+  </p>
+</section>
+
+<section class="section">
+  <h2>☎️ ONE LITTLE CALL</h2>
+  <p class="small">Panggilan simulasi untuk layar HP.</p>
+
+  <div class="row">
+    <button class="btn primary" onclick="startCall()">♡ Panggil Arka</button>
+    <button class="btn" onclick="endCall()">Tutup panggilan</button>
+  </div>
+
+  <div class="callbox" id="callbox">
+    <div style="font-size:2rem">♡</div>
+    <h3 id="calltitle">Memanggil Arka...</h3>
+    <p class="small" id="calltext">Tuut... tuut... ini cuma simulasi, ya.</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>🎵 OUR SONG</h2>
+  <p class="small">
+    Bring Me Back to Life — Chris Grey
+  </p>
+
+  <audio id="bgMusic" loop>
+  <source src="BRING%20ME%20BACK%20TO%20LIFE.mp3" type="audio/mpeg">
+  </audio>
+
+  <p class="small">
+    Jika musik belum muncul, unggah file audio tersebut ke folder utama
+    repository dengan nama persis
+    <b>BRING ME BACK TO LIFE.mp3</b>.
+    Tekan Play untuk memutar lagu.
+  </p>
+</section>
+
+<section class="section">
+  <h2>🔐 SECRET CORNER</h2>
+  <p class="small">Ada satu pesan kecil lagi kalau kamu sudah sampai sini.</p>
+
+  <button class="btn primary"
+          onclick="document.getElementById('secret').style.display='block'">
+    Buka rahasia ♡
+  </button>
+
+  <div class="secret" id="secret">
+    Kalau kamu membaca ini sampai akhir, berarti kamu sudah menjelajah
+    semua sudut kecil yang aku siapkan. Aku senang punya kamu di ceritaku.
+    — Jingga ♡
+  </div>
+</section>
+
+<div class="footer">
+  Dibuat dengan ♡ oleh Jingga, untuk Arka · Still you, still us.
+</div>
+
+</main>
+
 <script>
-const PASSWORD="arka21";document.getElementById('unlockForm').addEventListener('submit',function(e){e.preventDefault();if(document.getElementById('pass').value===PASSWORD){document.getElementById('lock').classList.add('hidden');document.getElementById('site').classList.remove('hidden')}else document.getElementById('err').textContent='Password-nya belum tepat, coba lagi ya ♡'});
-document.getElementById('chatform').addEventListener('submit',function(e){e.preventDefault();const i=document.getElementById('chatinput'),v=i.value.trim();if(!v)return;const b=document.createElement('div');b.className='bubble me';b.textContent=v;document.getElementById('chatlog').appendChild(b);i.value='';document.getElementById('chatlog').scrollTop=99999;setTimeout(()=>{const r=document.createElement('div');r.className='bubble';r.textContent=['Cie, kangen ya? 😏','Iya, aku dengerin kok ♡','Sini cerita lebih banyak.','Jangan lupa senyum hari ini, ya.'][Math.floor(Math.random()*4)];document.getElementById('chatlog').appendChild(r);document.getElementById('chatlog').scrollTop=99999},700)});
-function startCall(){document.getElementById('callbox').style.display='block';document.getElementById('calltitle').textContent='Memanggil Arka...';document.getElementById('calltext').textContent='Tuut... tuut... ♡'}function endCall(){document.getElementById('callbox').style.display='block';document.getElementById('calltitle').textContent='Panggilan berakhir';document.getElementById('calltext').textContent='Makasih sudah mampir ke sudut kecil kita. ♡'}function heartBurst(){for(let i=0;i<12;i++){const h=document.createElement('span');h.textContent=['♡','♥','✦'][i%3];h.style.cssText='position:fixed;left:'+Math.random()*95+'%;top:'+Math.random()*80+'%;z-index:20;color:#ef9acb;font-size:'+(18+Math.random()*20)+'px;pointer-events:none;transition:transform 1.2s,opacity 1.2s';document.body.appendChild(h);setTimeout(()=>{h.style.transform='translateY(-100px) rotate(25deg)';h.style.opacity='0'},50);setTimeout(()=>h.remove(),1400)}}
-</script></body></html>
+const PASSWORD = "arka21";
+
+document.getElementById("unlockForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  if (document.getElementById("pass").value === PASSWORD) {
+    document.getElementById("lock").classList.add("hidden");
+    document.getElementById("site").classList.remove("hidden");
+  } else {
+    document.getElementById("err").textContent =
+      "Password-nya belum tepat, coba lagi ya ♡";
+  }
+});
+
+/* Mencoba foto alternatif jika foto pertama gagal dimuat. */
+function tryNextPhoto(img) {
+  if (img.dataset.tried !== "yes") {
+    img.dataset.tried = "yes";
+    img.src = "tidak%20bernama%20(17).png";
+  } else {
+    img.style.display = "none";
+  }
+}
+
+document.getElementById("chatform").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const input = document.getElementById("chatinput");
+  const value = input.value.trim();
+
+  if (!value) return;
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble me";
+  bubble.textContent = value;
+
+  const log = document.getElementById("chatlog");
+  log.appendChild(bubble);
+  input.value = "";
+  log.scrollTop = log.scrollHeight;
+
+  setTimeout(function() {
+    const reply = document.createElement("div");
+    reply.className = "bubble";
+
+    const replies = [
+      "Cie, kangen ya? 😏",
+      "Iya, aku dengerin kok ♡",
+      "Sini cerita lebih banyak.",
+      "Jangan lupa senyum hari ini, ya."
+    ];
+
+    reply.textContent = replies[Math.floor(Math.random() * replies.length)];
+    log.appendChild(reply);
+    log.scrollTop = log.scrollHeight;
+  }, 700);
+});
+
+function startCall() {
+  document.getElementById("callbox").style.display = "block";
+  document.getElementById("calltitle").textContent = "Memanggil Arka...";
+  document.getElementById("calltext").textContent =
+    "Tuut... tuut... ♡";
+}
+
+function endCall() {
+  document.getElementById("callbox").style.display = "block";
+  document.getElementById("calltitle").textContent = "Panggilan berakhir";
+  document.getElementById("calltext").textContent =
+    "Makasih sudah mampir ke sudut kecil kita. ♡";
+}
+
+function heartBurst() {
+  for (let i = 0; i < 12; i++) {
+    const heart = document.createElement("span");
+    heart.textContent = ["♡", "♥", "✦"][i % 3];
+
+    heart.style.cssText =
+      "position:fixed;left:" + Math.random() * 95 +
+      "%;top:" + Math.random() * 80 +
+      "%;z-index:20;color:#ef9acb;font-size:" +
+      (18 + Math.random() * 20) +
+      "px;pointer-events:none;transition:transform 1.2s,opacity 1.2s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+      heart.style.transform = "translateY(-100px) rotate(25deg)";
+      heart.style.opacity = "0";
+    }, 50);
+
+    setTimeout(function() {
+      heart.remove();
+    }, 1400);
+  }
+}
+</script>
+
+</body>
+</html>
